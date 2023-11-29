@@ -2,17 +2,49 @@ import {Component} from 'react'
 
 import ConfigurationController from './components/ConfigurationController'
 
+import ConfigurationContext from './Context/ConfigurationContext'
+
 import Layout from './components/Layout'
 
 import './App.css'
 
 class App extends Component {
+  state = {
+    showContent: true,
+    showLeftNavBar: true,
+    showRightNavBar: true,
+  }
+
+  onToggleShowContent = () => {
+    this.setState(prevState => ({showContent: !prevState.showContent}))
+  }
+
+  onToggleShowLeftNavBar = () => {
+    this.setState(prevState => ({showLeftNavBar: !prevState.showLeftNavBar}))
+  }
+
+  onToggleShowRightNavBar = () => {
+    this.setState(prevState => ({showRightNavBar: !prevState.showRightNavBar}))
+  }
+
   render() {
+    const {showContent, showLeftNavBar, showRightNavBar} = this.state
     return (
-      <div>
-        <ConfigurationController />
-        <Layout />
-      </div>
+      <ConfigurationContext.Provider>
+        value ={' '}
+        {{
+          showContent,
+          showLeftNavBar,
+          showRightNavBar,
+          onToggleShowContent: this.onToggleShowContent,
+          onToggleShowLeftNavBar: this.onToggleShowLeftNavBar,
+          onToggleShowRightNavBar: this.onToggleShowRightNavBar,
+        }}
+        <div className="app-container">
+          <ConfigurationController />
+          <Layout />
+        </div>
+      </ConfigurationContext.Provider>
     )
   }
 }

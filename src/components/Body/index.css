@@ -1,1 +1,147 @@
 /* Write your CSS here */
+.body-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+}
+
+@media screen and (min-width: 768px) {
+  .body-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 500px;
+    margin-top: 7px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+  }
+}
+
+.left-nav-bar {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  color: #475569;
+  background-color: #e2e8f0;
+  height: 30%;
+  padding-top: 32px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .left-nav-bar {
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100%;
+    width: 30%;
+    max-width: 250px;
+    margin-right: 2px;
+    margin-left: 2px;
+  }
+}
+
+.navbar-heading {
+  color: #475569;
+  font-size: 32px;
+  font-family: 'Roboto';
+  font-weight: bold;
+  text-align: center;
+}
+
+.list-items {
+  display: flex;
+  flex-direction: row;
+  align-self: stretch;
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+@media screen and (min-width: 768px) {
+  .list-items {
+    flex-direction: column;
+  }
+}
+
+.content-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1f5f9;
+  color: #475569;
+  padding-top: 32px;
+  margin-bottom: 5px;
+  flex-grow: 1;
+  height: 100%;
+  margin-top: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .content-container {
+    margin-left: 2px;
+    margin-right: 2px;
+    height: 100%;
+    width: 40%;
+    align-self: flex-start;
+  }
+}
+
+.content-description {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #475569;
+  font-size: 32px;
+  font-weight: 500;
+  font-family: 'Roboto';
+  margin: 0px;
+}
+
+@media screen and (min-width: 768px) {
+  .content-description {
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 32px;
+    margin-left: 2px;
+    margin-right: 2px;
+    font-size: 25px;
+  }
+}
+
+.ad-box-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.ad-box {
+  border: 2px solid #475569;
+  height: 150px;
+  width: 180px;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #475569;
+  font-family: 'Roboto';
+  font-size: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .ad-box {
+    display: flex;
+    height: 200px;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-right: 0px;
+  }
+}
