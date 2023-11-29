@@ -31,7 +31,7 @@ class App extends Component {
     const {showContent, showLeftNavBar, showRightNavBar} = this.state
     return (
       <ConfigurationContext.Provider>
-        value ={' '}
+        value =
         {{
           showContent,
           showLeftNavBar,
